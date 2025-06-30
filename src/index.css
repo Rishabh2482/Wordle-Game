@@ -1,0 +1,85 @@
+body {
+  font-family: "Bangers", "Comic Sans MS", sans-serif;
+  background-color: #fdf0d5; /* Light comic-book page color */
+  color: #333;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: none;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.game-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  max-width: 400px;
+  height: auto;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background-color: #f7deab;
+  border: 5px solid #333;
+  border-radius: 15px;
+  margin: 12px;
+}
+
+/* Header */
+h1 {
+  font-size: 42px;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 2px 2px #fff, -2px -2px #000;
+  margin-bottom: 10px;
+}
+
+/* Board Styles */
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.row.current {
+  animation: wiggle 0.5s infinite alternate; /* Fun wiggle animation */
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
+
+/* Tile Styles */
+.tile {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #fefcbd;
+  color: #000;
+  border: 4px solid #000; /* Comic-style border */
+  box-shadow: 4px 4px 0 #333; /* Comic-style shadow */
+  transition: transform 0.2s, background-color 0.3s;
+}
