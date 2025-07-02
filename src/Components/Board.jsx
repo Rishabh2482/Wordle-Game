@@ -1,16 +1,19 @@
 import Row from "./Row";
 
-function Board({gusses , solution}) {
+function Board({guesses, solution, currentRow}) {
+    // console.log(guesses);
+    // console.log(solution);
     return(
         <div className="board">
 
-        {gusses.map( (guess , rowIndex)=> {
+        {guesses.map( (guess , rowIndex)=> {
             return <Row 
                         key={rowIndex}
                         guess ={guess}
                         solution ={solution}
+                        isActiveRow = {currentRow===rowIndex}
                     />
-        })
+            })
         }
         </div>
     )
