@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function KeyBoard(){
+function KeyBoard({onKeyPress}){
     const rows = ["qwertyuiop", "asdfghjkl", "zxcvbnm"];
     const [activeKey, setActiveKey] = useState(null); // For optional key highlight
 
@@ -27,7 +27,7 @@ function KeyBoard(){
                         </button>
                     ))}
 
-                    {index === 2 && (
+                    {index === 2 && (       // This is for backspace and enter button
                         <>
                         <button
                             className={`key special-key ${activeKey === "Enter" ? "active" : ""}`}

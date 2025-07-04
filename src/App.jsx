@@ -39,7 +39,7 @@ function App(){
                     <strong>Hint: </strong> {hint}
                 </div>
             </div>
-            <KeyBoard />
+            <KeyBoard onKeyPress={handleKeyPress}/>
 
             {gameOver && <PopUp 
                 message = {message}
